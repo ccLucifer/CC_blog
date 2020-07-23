@@ -4,6 +4,8 @@ import com.cc.po.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * @author CC
  * @create 2020-07-15 14:38
@@ -17,6 +19,10 @@ public interface TagService {
     Tag getByName(String name);
 
     Page<Tag> listTag(Pageable pageable);
+
+    List<Tag> listTag();
+
+    List<Tag> listTag(String ids);
 
     void delete(Long id);
 
